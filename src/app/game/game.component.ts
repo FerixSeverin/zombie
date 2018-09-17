@@ -25,7 +25,8 @@ export class GameComponent implements OnInit {
   amountOfHouses = 0;
   infectedTown = false;
   gameInterval;
-  intervalMS = 200;
+  intervalMS = 275;
+  newSimulationDelay = 300;
 
   constructor() {}
 
@@ -87,7 +88,7 @@ export class GameComponent implements OnInit {
           this.resetTown();
           this.sendZombie();
           this.createInterval();
-        }, 300);
+        }, this.newSimulationDelay);
       }
     }
   }
@@ -161,7 +162,7 @@ export class GameComponent implements OnInit {
     PIXI.loader
       .add('blueHouse', 'assets/blue_house.png')
       .add('redHouse', 'assets/infected_house.png')
-      .add('arrow', 'assets/arrow.png')
+      .add('arrow', 'assets/hdArrow.png')
       .load(() => {
         // Creates the town
         this.createTown(10, 10);
@@ -170,8 +171,8 @@ export class GameComponent implements OnInit {
         const arrowButton = new PIXI.Sprite(PIXI.loader.resources.arrow.texture);
         arrowButton.buttonMode = true;
         arrowButton.interactive = true;
-        arrowButton.x = 970;
-        arrowButton.y = 540;
+        arrowButton.x = 920;
+        arrowButton.y = 530;
         this.renderer.stage.addChild(arrowButton);
 
         // Launches the code when the player clicks the arrow button

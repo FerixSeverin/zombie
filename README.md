@@ -6,13 +6,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This site simulates a zombie invasion of a town with 100 houses.
 
-In the beginning of the simulation a zombie appears in a random house and infects the house and its inhabitants. Each house only has one inhabitant.
+In the beginning of the simulation a zombie appears in a random house and infects the house and its inhabitant.
 
 Each round every zombie goes to a random nearby house and infects it.
 
 Zombies can move up, down, left and right but not diagonally.
 
 The simulation is complete when every house has been infected.
+
+Click the blue arrow to start the simulation.
 
 ## Compilation
 
@@ -28,4 +30,4 @@ Get the dependencies by typing "npm install". The install may take a while.
 
 To run the project localy type "ng serve", after the loading is complete you should be able to see the page on http://localhost:4200/
 
-If you want a production version of the site you can type "ng build --prod". The site should be in /dist/zombie.
+If you want a production version of the site you can type "ng build --prod". The compiled site should be in /dist/zombie.
